@@ -233,3 +233,8 @@ Person.prototype.introduction=function(){
 };
 
 
+
+
+Person.prototype.nickname='';
+jerry.nickname='The Big Jare';
+sally.nickname='Sallers'
