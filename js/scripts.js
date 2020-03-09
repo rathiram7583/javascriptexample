@@ -195,15 +195,38 @@ var newObject={
 
 //object constructors
 
-function person(name,age,hobbies){
+function Person(name,age,hobbies){
     this.name=name;
     this.age=age;
-    this.hoobies=hobbies;
+    this.hobbies=hobbies;
 }
 
-var jerry=new person('Jeryy',61,['snow boarding','action movies','programming']);
-var sally=new person('sally',36,['daredevil biking','comedy movies','skating']);
+var jerry=new Person('Jeryy',61,['snow boarding','action movies','programming']);
+var sally=new Person('sally',36,['daredevil biking','comedy movies','skating']);
 
 
+
+Person.prototype.introduction=function(){
+    var hobbiesString ='<ul>';
+    this.hobbies.forEach(function(value,index){
+        hobbiesString+='<li>'+value+'<li>';
+
+    });
+    hobbiesString+='<ul>';
+    document.body.innerHTML+=`
+    <h2>` + this.name+`</h2>
+    <d1>
+    <dt>Age<dt>
+    <dd>`+this.age+`<dd>
+    <dt>Hobbies</dt>
+    <dd>`+hobbiesString+`<dd>
+    <dl>
+
+     
+`;
+
+
+
+};
 
 
