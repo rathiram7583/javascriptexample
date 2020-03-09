@@ -162,6 +162,48 @@ console.log(`test string`=="test string");//true
 
 
 
+/**
+ * Lets dig in to objects!
+ */
+var myObject={
+    name: 'Jerry',
+    age:  61,
+    hobbies:['snowboarding','action movies']
+};
+
+console.log(myObject);
+console.log('Object "name":'+myObject.name);
+console.log('Object "age":'+myObject.age);
+console.log('Object "hobbies":'+myObject.hobbies[0]+','+myObject.hobbies[1]);
+
+
+myObject.hobbies.push('programming');
+console.log('Updated hobbies:');
+console.log(myObject.hobbies);
+
+console.log('Updated object:');
+console.log(myObject);
+var newObject={
+    myNum:5,
+    updateNum:function(){
+     this.myNum=this.myNum+5;
+     return this.myNum;   
+    }
+
+
+};
+
+//object constructors
+
+function person(name,age,hobbies){
+    this.name=name;
+    this.age=age;
+    this.hoobies=hobbies;
+}
+
+var jerry=new person('Jeryy',61,['snow boarding','action movies','programming']);
+var sally=new person('sally',36,['daredevil biking','comedy movies','skating']);
+
 
 
 
