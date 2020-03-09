@@ -199,6 +199,9 @@ function Person(name,age,hobbies){
     this.name=name;
     this.age=age;
     this.hobbies=hobbies;
+    this.sayGoodBye=function(){
+        document.body.innerHTML +=`<p> This is <strong>` +this.name+ `</strong>,saying <em> Good Bye</em>!</p>`;
+    };
 }
 
 var jerry=new Person('Jeryy',61,['snow boarding','action movies','programming']);
